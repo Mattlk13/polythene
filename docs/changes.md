@@ -2,6 +2,10 @@
 
 <!-- MarkdownTOC autolink="true" autoanchor="true" bracket="round" levels="2,3" -->
 - [1.7](#17)
+  - [1.7.4](#174)
+  - [1.7.3](#173)
+  - [1.7.2](#172)
+  - [1.7.1](#171)
   - [1.7.0](#170)
     - [Mithril 2.x](#mithril-2x)
     - [Regular updates](#regular-updates)
@@ -58,6 +62,27 @@
 <!-- /MarkdownTOC -->
 
 ## 1.7
+
+### 1.7.4
+
+Added typing for Mithril 1.x (Button and ListTile).
+
+### 1.7.3
+
+* Removed `polythene-scripts`: function `writeCSS` is replaced with standalone package `write-j2c` at https://github.com/ArthurClemens/write-j2c.
+
+Bug fix:
+
+* Added 2 missing `index.d.ts` entries.
+
+
+### 1.7.2
+
+Fixes a bug in TextField where event options were overwritten.
+
+### 1.7.1
+
+Fixes TS typings for Mithril's `m.route.Link`.
 
 ### 1.7.0
 
@@ -157,7 +182,7 @@ Integration of [Cyano](https://github.com/ArthurClemens/cyano) (which includes t
 
 #### CSS
 
-Function `writeCSS` in [polythene-scripts](packages/polythene-scripts.md#write-css) can be used to write themed CSS to a file. The function accepts new option `wrapInGlobal` to use with CSS Modules: set to `true` to wrap the generated css inside a `:global { ... }` tag.
+Function `writeCSS` in [polythene-scripts](packages/polythene-scripts.md#write-css) can be used to write themed CSS to a file. The function accepts new option `wrapInGlobal` to use with CSS Modules: set to `true` to wrap the generated css inside a `:global { ... }` tag. NOTE: `writeCSS` has been replaced in 1.7.1 with an standalone library.
 
 #### Focus indication
 
